@@ -14,7 +14,7 @@ export const AppLayout: React.FC = () => {
             <div className="flex-shrink-0">
               <Link to="/" className="flex items-center">
                 <UserCircle className="h-8 w-8 text-indigo-600" />
-                <span className="ml-2 text-xl font-bold text-gray-900">RegistrationApp</span>
+                <span className="ml-2 text-xl font-bold text-gray-900">Bax Registration App</span>
               </Link>
             </div>
             <nav className="flex space-x-4">
