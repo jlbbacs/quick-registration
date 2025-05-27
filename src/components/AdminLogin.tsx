@@ -13,15 +13,15 @@ export const AdminLogin: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!username || !password) {
       setError('Username and password are required');
       return;
     }
-    
+
     setIsLoading(true);
     setError(null);
-    
+
     try {
       const success = await login(username, password);
       if (success) {
@@ -53,7 +53,7 @@ export const AdminLogin: React.FC = () => {
         </div>
 
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
-          <div className="-space-y-px rounded-md shadow-sm">
+          <div className="space-y-4">
             <div>
               <label htmlFor="username" className="sr-only">
                 Username
@@ -63,7 +63,7 @@ export const AdminLogin: React.FC = () => {
                 name="username"
                 type="text"
                 required
-                className="relative block w-full rounded-t-md border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 px-3"
+                className="block w-full rounded-md border-0 py-2 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-indigo-600 sm:text-sm px-3"
                 placeholder="Username"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
@@ -78,7 +78,7 @@ export const AdminLogin: React.FC = () => {
                 name="password"
                 type="password"
                 required
-                className="relative block w-full rounded-b-md border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 px-3"
+                className="block w-full rounded-md border-0 py-2 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-indigo-600 sm:text-sm px-3"
                 placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
@@ -87,10 +87,8 @@ export const AdminLogin: React.FC = () => {
           </div>
 
           {error && (
-            <div className="rounded-md bg-red-50 p-4">
-              <div className="flex">
-                <div className="text-sm text-red-700">{error}</div>
-              </div>
+            <div className="rounded-md bg-red-100 p-3 text-sm text-red-700">
+              {error}
             </div>
           )}
 
@@ -108,8 +106,8 @@ export const AdminLogin: React.FC = () => {
 
           <div className="text-center text-sm text-gray-500">
             <p>Demo credentials:</p>
-            <p>Username: admin</p>
-            <p>Password: admin123</p>
+            <p>Username: <strong>admin</strong></p>
+            <p>Password: <strong>admin123</strong></p>
           </div>
         </form>
       </div>
