@@ -124,7 +124,8 @@ export const RegistrationForm: React.FC = () => {
                 type="text"
                 id="fullName"
                 {...register('fullName')}
-                className="p-2 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                className="p-2 mt-1 block w-full rounded-md border border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+
                 style={{ border: errors.fullName ? '1px solid red' : '' }}
               />
               {errors.fullName && (
@@ -141,7 +142,7 @@ export const RegistrationForm: React.FC = () => {
                 type="email"
                 id="email"
                 {...register('email')}
-                className="p-2 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                className="p-2 mt-1 block w-full rounded-md border border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                 style={{ border: errors.email ? '1px solid red' : '' }}
               />
               {errors.email && (
@@ -158,7 +159,8 @@ export const RegistrationForm: React.FC = () => {
                 type="tel"
                 id="phone"
                 {...register('phone')}
-                className="p-2 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                className="p-2 mt-1 block w-full rounded-md border border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+
                 style={{ border: errors.phone ? '1px solid red' : '' }}
               />
               {errors.phone && (
@@ -221,7 +223,8 @@ export const RegistrationForm: React.FC = () => {
                 type="date"
                 id="dateOfBirth"
                 {...register('dateOfBirth')}
-                className="p-2 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+               className="p-2 mt-1 block w-full rounded-md border border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+
                 style={{ border: errors.dateOfBirth ? '1px solid red' : '' }}
               />
               {errors.dateOfBirth && (
@@ -239,8 +242,9 @@ export const RegistrationForm: React.FC = () => {
               id="address"
               {...register('address')}
               rows={3}
-              className="p-2 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-              style={{ border: errors.address ? '1px solid red' : '' }}
+             
+             className="p-2 mt-1 block w-full rounded-md border border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+             style={{ border: errors.address ? '1px solid red' : '' }}
             />
             {errors.address && (
               <p className="mt-1 text-sm text-red-600">{errors.address.message}</p>
